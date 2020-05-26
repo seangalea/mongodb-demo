@@ -6,3 +6,8 @@ The presence of certain optional fields enable the resource to make use of certa
 * ttl: sets a deadline for the existence of the token
 
 Any new fields can be added to a resource at the time of POSTing it. Business logic can be added at any time to the application in order to utilize the new fields.
+
+# Setup Instructions
+* docker volume create --name=mongodata
+* docker run --name mongodb -v mongodata:/data/db -d -p 27017:27017 mongo
+* run java application
